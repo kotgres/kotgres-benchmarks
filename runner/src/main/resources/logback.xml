@@ -1,0 +1,25 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{YYYY-MM-dd HH:mm:ss.SSS} [%thread] %X{call-id} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+    <!-- All logs enabled for our own logger -->
+    <logger name="io.kotgres.benchmarks" level="TRACE"/>
+
+    <!-- Minimal logs for external dependencies -->
+    <logger name="org.hibernate" level="ERROR"/>
+    <logger name="io.ebean" level="ERROR"/>
+    <logger name="com.j256" level="ERROR"/>
+    <logger name="Exposed" level="ERROR"/>
+    <logger name="org.jooq" level="ERROR"/>
+    <logger name="com.zaxxer" level="ERROR"/>
+    <logger name="org.ktorm" level="ERROR"/>
+    <logger name="io.kotgres" level="ERROR"/>
+
+</configuration>

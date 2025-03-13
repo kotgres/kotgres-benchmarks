@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres:15.1-alpine
+    container_name: "kotgres-benchmarks-db"
+    environment:
+      - POSTGRES_USER=kotgresbench
+      - POSTGRES_PASSWORD=kotgresbench123
+      - POSTGRES_DB=kotgresbench
+    ports:
+      - '54330:5432'
+    volumes:
+      - ./src/test/resources/migrations:/docker-entrypoint-initdb.d/
