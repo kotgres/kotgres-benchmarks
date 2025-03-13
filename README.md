@@ -1,6 +1,6 @@
 # Kotgres Benchmarks
 
-Benchmarks for to compare the performance of the best known ORMs for Kotlin and Java.
+Benchmarks for to compare the performance of well-known ORMs for Kotlin and Java versus Kotgres.
 
 The benchmarks have the goal to be as unbiased as possible and to follow the docs to implement the benchmark functions.
 
