@@ -26,10 +26,8 @@ Make sure you have Docker installed. If not, you can install it [here](https://d
 ### Running the benchmarks
 
 Follow the next steps:
-1. Open the file `java/io/kotgres/benchmarks/runner/BenchmarkRunner.kt`
-2. Configure the main function to your liking. You can configure:
-    - entityCount: how many entities are used to run the tests. The bigger the number the slower the benchmarks woill be
-    - mode: you can choose to run all ORMs with `Mode.ALL`, or for specific languages using `Mode.KOTLIN` or `Mode.JAVA`
+1. Bring up the local Postgres database by running `docker compose up -d`
+2. Open the file `java/io/kotgres/benchmarks/runner/BenchmarkRunner.kt` on your IDE
 3. Right click on `BenchmarkRunner.kt` and select `Run 'BenchmarkRunnerKt'` (it can take up to 5 minutes with the default settings, be patient)
 4. Wait for the benchmarks to finish and check the results in the console
 
